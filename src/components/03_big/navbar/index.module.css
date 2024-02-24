@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f8fb;
+  width: 100vw;
+  height: 5rem;
+}
+
+.image {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.heading {
+  color: #6093c1;
+  margin: 2rem;
+  font-size: large;
+  transform: scaleY(1.5);
+  font-weight: bold;
+  margin-left: 5rem;
+}
+
+.search {
+  padding: 0.02rem 2rem;
+  margin: 1.5rem;
+  margin-top: 1.3rem;
+  border: 0.01rem solid #d2d4d5;
+  border-radius: 10px;
+  height: 2.5rem;
+  outline-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.icons {
+  width: 10rem;
+  height: 1rem;
+  position: absolute;
+  right: 9.5rem;
+  bottom: 32.59rem;
+}
