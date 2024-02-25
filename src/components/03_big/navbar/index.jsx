@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-const NavBar = () => {
+const NavBar = ({ state, setTest, value }) => {
   return (
     <>
       <div className={styles.navbar}>
@@ -10,12 +10,21 @@ const NavBar = () => {
         ></img>
         <p className={styles.heading}>Weather App</p>
         <div>
-        <input
-          type="search"
-          className={styles.search}
-          placeholder="Enter city name..."
-        ></input>
-        <img src="../../src/assets/magnifying-glass-solid.svg" className={styles.icons}/>
+          <input
+            type="search"
+            className={styles.search}
+            placeholder="Enter city name..."
+            onChange={(event) => {
+              state(event.target.value);
+            }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter") setTest(value);
+            }}
+          ></input>
+          <img
+            src="../../src/assets/magnifying-glass-solid.svg"
+            className={styles.icons}
+          />
         </div>
       </div>
     </>

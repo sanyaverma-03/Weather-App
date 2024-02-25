@@ -6,6 +6,7 @@ import BigCard from "./components/02_medium/bigCard";
 function App() {
   const [state, setState] = useState("London");
   const [weatherData, setWeatherData] = useState([]);
+  const [test, setTest] = useState("");
 
   const options = {
     method: "GET",
@@ -27,14 +28,17 @@ function App() {
   };
   useEffect(() => {
     getData();
-  }, []);
+  }, [test]);
+
   if (weatherData.length === 0) {
     return <h1>Loading....</h1>;
   }
+
+  console.log(state);
   return (
     <>
       <div style={{ backgroundColor: "#f6f8fb" }}>
-        <NavBar />
+        <NavBar state={setState} value={state} setTest={setTest} />
         <Card />
         <BigCard data={weatherData} />
       </div>
