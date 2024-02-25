@@ -5,7 +5,7 @@ const SmallCard = ({ icon, headline, time }) => {
     <>
       <div className={styles.card}>
         <img src={icon} className={styles.iconImage} />
-        <div>
+        <div className={styles.para}>
           <p className={styles.txt}>{headline}</p>
           <p className={styles.txt} style={{fontWeight:"bold"}}>{time}</p>
         </div>

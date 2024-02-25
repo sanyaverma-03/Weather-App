@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  border: 0.01rem solid #6093c1;
+  width: 32vw;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  gap: 3rem;
+  background-color: white;
+  box-shadow: 6px 5px 11px darkgrey;
+}
+
+.primaryCard,
+.secondaryCard {
+  display: flex;
+  justify-content: space-between;
+}

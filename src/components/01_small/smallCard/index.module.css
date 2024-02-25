@@ -12,3 +12,9 @@
     letter-spacing: -0.1rem;
     transform: scaleY(1.2);
 }
+
+.para{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
