@@ -35,7 +35,6 @@ function App() {
     return <h1>Loading....</h1>;
   }
 
-  console.log(weatherData);
   return (
     <>
       <div style={{ backgroundColor: "#f6f8fb", overflow:"hidden" }}>

@@ -23,7 +23,7 @@
 
 .search {
   padding: 0.02rem 2rem;
-  margin: 1.5rem;
+  margin: 2.2rem;
   margin-top: 1.3rem;
   border: 0.01rem solid #d2d4d5;
   border-radius: 10px;
@@ -37,6 +37,6 @@
   width: 10rem;
   height: 1rem;
   position: absolute;
-  right: 8.5rem;
+  right: 9rem;
   bottom: 36.5rem;
 }

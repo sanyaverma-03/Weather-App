@@ -12,10 +12,12 @@
   box-shadow: 6px 5px 11px darkgrey;
   margin-right: 0rem;
   height:12rem;
+  margin-left: 2rem;
+  padding:2rem;
 }
 
 .primaryCard,
 .secondaryCard {
   display: flex;
-  justify-content: space-between;
+  gap:8.5rem
 }

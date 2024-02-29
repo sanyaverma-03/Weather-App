@@ -1,0 +1,14 @@
+.box {
+  background-color: #6093c1;
+  border: 0.01rem solid #396286;
+  width: 32vw;
+  justify-content: space-between;
+  border-radius: 25px;
+  color:white;
+  box-shadow: 6px 5px 11px darkgrey;
+  margin-right: 0rem;
+  height: 8rem;
+  margin-left: 2rem;
+  padding: 1.5rem;
+
+}
