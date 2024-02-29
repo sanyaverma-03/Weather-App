@@ -30,7 +30,7 @@ const BigCard = ({data}) => {
           />
         </div>
       </div>
-      <Box/>
+      <Box data={data}/>
       </div>
     </>
   );
