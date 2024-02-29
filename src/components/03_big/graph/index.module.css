@@ -1,0 +1,12 @@
+.Maingraph{
+
+        margin: 5rem;
+        margin-left:0rem;
+        border: 0.01rem solid #6093c1;
+        width: 50vw;
+        padding: 1rem 1rem;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 6px 5px 11px darkgrey;
+    
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import NavBar from "./components/03_big/navbar";
 import Card from "./components/03_big/card";
 import BigCard from "./components/02_medium/bigCard";
+import Graph from "./components/03_big/graph";
 
 function App() {
   const [state, setState] = useState("London");
@@ -34,13 +35,17 @@ function App() {
     return <h1>Loading....</h1>;
   }
 
-  console.log(state);
+  console.log(weatherData);
   return (
     <>
-      <div style={{ backgroundColor: "#f6f8fb" }}>
+      <div style={{ backgroundColor: "#f6f8fb", overflow:"hidden" }}>
         <NavBar state={setState} value={state} setTest={setTest} />
-        <Card />
+        <Card data={weatherData}/>
+        <div style={{display:"flex",gap:"5rem",height:"35rem"}}>
         <BigCard data={weatherData} />
+        <Graph />
+        </div>
+        
       </div>
     </>
   );
