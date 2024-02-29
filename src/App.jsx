@@ -9,6 +9,9 @@ function App() {
   const [weatherData, setWeatherData] = useState([]);
   const [test, setTest] = useState("");
 
+  const latitude = weatherData?.location?.lat;
+  const longitude = weatherData?.location?.lon;
+
   const options = {
     method: "GET",
     headers: {
@@ -35,16 +38,17 @@ function App() {
     return <h1>Loading....</h1>;
   }
 
+  console.log(weatherData);
+
   return (
     <>
-      <div style={{ backgroundColor: "#f6f8fb", overflow:"hidden" }}>
+      <div style={{ backgroundColor: "#f6f8fb", overflow: "hidden" }}>
         <NavBar state={setState} value={state} setTest={setTest} />
-        <Card data={weatherData}/>
-        <div style={{display:"flex",gap:"5rem",height:"35rem"}}>
-        <BigCard data={weatherData} />
-        <Graph />
+        <Card data={weatherData} />
+        <div style={{ display: "flex", gap: "5rem", height: "35rem" }}>
+          <BigCard data={weatherData} />
+          <Graph latitude={latitude} longitude={longitude} />
         </div>
-        
       </div>
     </>
   );

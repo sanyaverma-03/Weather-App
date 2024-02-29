@@ -11,13 +11,13 @@
   background-color: white;
   box-shadow: 6px 5px 11px darkgrey;
   margin-right: 0rem;
-  height:12rem;
+  height: 12rem;
   margin-left: 2rem;
-  padding:2rem;
+  padding: 2rem;
 }
 
 .primaryCard,
 .secondaryCard {
   display: flex;
-  gap:8.5rem
+  gap: 6.5rem;
 }

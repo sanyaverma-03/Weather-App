@@ -3,8 +3,11 @@ import ReactApexChart from "react-apexcharts";
 import { useEffect, useState } from "react";
 import moment from "moment";
 
-const Graph = () => {
+const Graph = ({ longitude, latitude }) => {
   const [res1, setRes] = useState([]);
+  const startDate = moment(res1[0]?.dt_txt).format("ll");
+  const endDate = moment(res1[19]?.dt_txt).format("ll");
+
   const [graph, setGraph] = useState({
     series: [
       {
@@ -27,7 +30,7 @@ const Graph = () => {
         curve: "straight",
       },
       title: {
-        text: "Temperature. Precipitation. Wind",
+        text: "Next 3 days forecast",
         align: "left",
       },
       grid: {
@@ -45,14 +48,14 @@ const Graph = () => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "8902c51255mshb90ccfe695a8544p148f32jsn5ade4e0d6fc6",
+      "X-RapidAPI-Key": "e93b0223c9mshd98d651a954d049p1f82e3jsn1e57bef7d62e",
       "X-RapidAPI-Host": "open-weather13.p.rapidapi.com",
     },
   };
 
   const getData = () => {
     fetch(
-      "https://open-weather13.p.rapidapi.com/city/fivedaysforcast/30.438/-89.1028",
+      `https://open-weather13.p.rapidapi.com/city/fivedaysforcast/${latitude}/${longitude}`,
       options
     )
       .then((response) => response.json())
@@ -81,8 +84,13 @@ const Graph = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [latitude, longitude]);
+
+  if (res1.length === 0) {
+    return <h1>Loading....</h1>;
+  }
   console.log(res1);
+
   return (
     <>
       <div className={styles.Maingraph}>
